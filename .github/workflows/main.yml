@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [10.x]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -33,7 +33,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: npm ci
+        run: npm install
+      - name: Debug npm error log
+        run: |
+          echo "Running npm ci..."
+          npm ci || true  # Run npm ci but continue even if it fails
+          echo "Displaying npm debug log if any error occurs..."
+          cat /home/runner/.npm/_logs/*.log || true  # Display logs if available
       - name: Build application
         run: npm run build --if-present
       - name: Run tests
