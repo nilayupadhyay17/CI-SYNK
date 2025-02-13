@@ -53,8 +53,9 @@ jobs:
       - name: Remove node_modules and package-lock.json
         run: rm -rf node_modules package-lock.json
 
-      - name: Install dependencies 
+      - name: Install dependencies (Fix node-sass issue)
         run: |
+          npm install node-sass@6
           npm install
 
       - name: Debug npm error log
