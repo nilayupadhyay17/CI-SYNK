@@ -32,6 +32,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Install Python 3
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Configure npm to use Python 3
+        run: npm config set python python3
       - name: Install dependencies
         run: npm install
       - name: Debug npm error log
