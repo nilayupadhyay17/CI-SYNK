@@ -41,7 +41,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.2.0",
-    "microbundle-crl": "^0.13.10",
+    "microbundle-crl": "^0.13.11",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
     "react": "^16.14.0",
@@ -52,7 +52,7 @@
     "dist"
   ],
   "dependencies": {
-    "jquery": "^3.6.2",
+    "jquery": "^3.6.0",
     "sass": "^1.63.2",
     "yarn": "^1.22.19"
   }
