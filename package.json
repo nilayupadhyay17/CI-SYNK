@@ -46,14 +46,14 @@
     "prettier": "^2.0.4",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "sass": "^1.84.0"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
     "jquery": "^3.6.0",
-    "sass": "^1.63.2",
     "yarn": "^1.22.19"
   }
 }
