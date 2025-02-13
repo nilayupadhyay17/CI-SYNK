@@ -36,7 +36,10 @@ jobs:
         run: npm ci
       - name: Debug npm error log
         run: |
-           cat /home/runner/.npm/_logs/2025-02-13T18_35_08_120Z-debug.log || true
+          echo "Running npm ci..."
+          npm ci || true  # Run npm ci but continue even if it fails
+          echo "Displaying npm debug log if any error occurs..."
+          cat /home/runner/.npm/_logs/*.log || true  # Display logs if available
       - name: Build application
         run: npm run build --if-present
       - name: Run tests
